@@ -1,0 +1,11 @@
+{
+    "name": "OSG Software container image workflow",
+    "description": "OSG Software container CI workflow template.",
+    "iconName": "docker-icon",
+    "categories": [
+        "Dockerfile"
+    ],
+    "filePatterns": [
+        "^Dockerfile",
+    ]
+}
