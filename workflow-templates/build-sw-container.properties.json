@@ -1,6 +1,6 @@
 {
-    "name": "OSG Software container image workflow",
-    "description": "OSG Software container CI workflow template.",
+    "name": "Publish OSG Software container image",
+    "description": "Build and push OSG Software container images to Docker Hub.",
     "iconName": "docker-icon",
     "categories": [
         "Dockerfile"
