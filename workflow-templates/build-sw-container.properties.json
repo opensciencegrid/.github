@@ -6,6 +6,6 @@
         "Dockerfile"
     ],
     "filePatterns": [
-        "^Dockerfile",
+        "^Dockerfile"
     ]
 }
