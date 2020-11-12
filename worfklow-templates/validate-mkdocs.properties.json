@@ -1,0 +1,8 @@
+{
+    "name": "MkDocs deployment workflow",
+    "description": "MkDocs deploy to GitHub Pages workflow template.",
+    "iconName": "osg-icon",
+    "filePatterns": [
+        "^mkdocs.yml$",
+    ]
+}
