@@ -29,7 +29,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - id: generate-tag-list
+    - name: Generate tag list
+      id: generate-tag-list
       env:
         REPO: ${{ matrix.repo }}
         TIMESTAMP: ${{ needs.make-date-tag.outputs.dtag }}
