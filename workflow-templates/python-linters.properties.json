@@ -1,0 +1,8 @@
+{
+    "name": "Run Python linters",
+    "description": "Lint Python code using pylint and flake8",
+    "iconName": "osg-icon",
+    "categories": [
+        "Python"
+    ]
+}
