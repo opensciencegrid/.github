@@ -6,7 +6,8 @@ on:
   repository_dispatch:
     types:
       - dispatch-build
-
+  workflow_dispatch:
+      
 jobs:
   make-date-tag:
     runs-on: ubuntu-latest
