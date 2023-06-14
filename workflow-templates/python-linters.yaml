@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v2
     - id: python-files
       run: |
-        echo "::set-output name=filelist::$(find . -type f -exec awk ' /^#!.*python/{print FILENAME} {nextfile}' {} + | tr '\n' ' ')"
+        echo "fileslist=$(find . -type f -exec awk ' /^#!.*python/{print FILENAME} {nextfile}' {} + | tr '\n' ' ')" >> $GITHUB_OUTPUT
 
   pylint:
     runs-on: ubuntu-latest
