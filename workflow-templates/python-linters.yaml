@@ -8,7 +8,7 @@ jobs:
     outputs:
       filelist: ${{ steps.python-files.outputs.filelist }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - id: python-files
       run: |
         echo "fileslist=$(find . -type f -exec awk ' /^#!.*python/{print FILENAME} {nextfile}' {} + | tr '\n' ' ')" >> $GITHUB_OUTPUT
@@ -17,14 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: [python-files]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Python 3.6
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: 3.6
 
-    - uses: actions/cache@v2
+    - uses: actions/cache@v3
       with:
         path: ~/pip-cache
         key: pip-3.6-${{ github.sha }}
@@ -47,14 +47,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: [python-files]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Python 3.6
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: 3.6
 
-    - uses: actions/cache@v2
+    - uses: actions/cache@v3
       with:
         path: ~/pip-cache
         key: pip-3.6-${{ github.sha }}
